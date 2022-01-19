@@ -109,6 +109,7 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 set completeopt=longest,menu    "?Vim??????????IDE??(??VimTip1228)
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "???????????????
 set background=dark
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 colorscheme blackdust_modified
 
 " 进入插入模式下的光标形状
@@ -137,3 +138,7 @@ let g:ctrlsf_search_mode = 'async'
 let g:ctrlsf_auto_close=0
 
 nmap <c-c> "+y
+
+" 搜索忽略大小写
+set ignorecase
+
